@@ -166,7 +166,20 @@ def stock_piece(recherche: str, depot: str | None = None) -> dict:
     Rend : {"pieces": [{"ref", "libelle", "depot", "quantite"}, …]} — au plus 10 lignes.
     Tables : pieces (ref, libelle) et stock (ref, depot, quantite). Requête paramétrée !
     """
-    raise NotImplementedError("stock_piece : à écrire (séance 25, mission 3)")
+    conditions = "(upper(p.ref) = upper(?) or simple(p.libelle) like ?)"
+    valeurs = [recherche.strip(), f"%{_simple(recherche)}%"]
+    if depot:
+        conditions += " and simple(s.depot) = simple(?)"
+        valeurs.append(depot.strip())
+    with connexion() as db:
+        lignes = db.execute(
+            f"""select p.ref, p.libelle, s.depot, s.quantite
+                  from pieces p
+                  join stock s on s.ref = p.ref
+                 where {conditions}
+                 order by p.ref, s.depot
+                 limit 10""", valeurs).fetchall()
+    return {"pieces": [dict(x) for x in lignes]}
 
 
 def techniciens_secteur(secteur: str, fluides: bool = False) -> dict:
@@ -177,7 +190,15 @@ def techniciens_secteur(secteur: str, fluides: bool = False) -> dict:
     Rend : {"secteur", "techniciens": [{"prenom", "nom", "habilitation_fluides"}, …]}.
     Table : techniciens. Ni téléphone ni adresse : il n'y en a pas, et c'est voulu.
     """
-    raise NotImplementedError("techniciens_secteur : à écrire (séance 25, mission 3)")
+    sql = ("select prenom, nom, habilitation_fluides from techniciens "
+           "where simple(secteur) = simple(?)")
+    valeurs = [secteur.strip()]
+    if fluides:
+        sql += " and habilitation_fluides = 1"
+    sql += " order by nom, prenom"
+    with connexion() as db:
+        lignes = db.execute(sql, valeurs).fetchall()
+    return {"secteur": secteur, "techniciens": [dict(x) for x in lignes]}
 
 
 # ── Ce que le modèle voit : nom, description, paramètres (JSON Schema) ──────────
@@ -204,7 +225,17 @@ OUTILS = [
            {"code": {"type": "string"}, "motif": {"type": "string"},
             "semaine_du": {"type": "string", "description": "lundi de la semaine voulue, AAAA-MM-JJ (facultatif)"}},
            ["code", "motif"]),
-    # Mission 3 : décrivez ici stock_piece et techniciens_secteur, puis ajoutez-les à EXECUTER.
+        _outil("stock_piece", "Quantité en stock d'une pièce, par dépôt (Saint-Étienne, Montbrison). "
+           "recherche : une référence (P-CIRC-25) ou un morceau de libellé (« circulateur »). "
+           "depot : facultatif.",
+           {"recherche": {"type": "string", "description": "référence ou morceau de libellé"},
+            "depot": {"type": "string", "description": "Saint-Étienne ou Montbrison (facultatif)"}},
+           ["recherche"]),
+    _outil("techniciens_secteur", "Les techniciens d'un secteur (Saint-Étienne, Montbrison, Gier, Ondaine). "
+           "fluides=true pour ne garder que ceux habilités fluides frigorigènes (pompes à chaleur).",
+           {"secteur": {"type": "string", "description": "nom du secteur"},
+            "fluides": {"type": "boolean", "description": "true = habilitation fluides seulement"}},
+           ["secteur"]),
 ]
 
 EXECUTER = {
@@ -213,6 +244,8 @@ EXECUTER = {
     "historique_interventions": historique_interventions,
     "garantie_equipement": garantie_equipement,
     "proposer_rendez_vous": proposer_rendez_vous,
+    "stock_piece": stock_piece,
+    "techniciens_secteur": techniciens_secteur,
 }
 
 
