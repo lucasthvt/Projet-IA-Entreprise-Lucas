@@ -1,0 +1,16 @@
+[
+  {"id": "R01", "question": "Le remplacement d'une électrode d'allumage est-il inclus dans la formule Confort ?", "source_attendue": "conditions-generales.md", "doit_contenir_un_de": [["oui", "inclus", "incluse", "compris", "pris en charge"]]},
+  {"id": "R02", "question": "Quel est le plafond de pièces de la formule Sérénité ?", "source_attendue": "conditions-generales.md", "doit_contenir_un_de": [["600"]]},
+  {"id": "R03", "question": "Le compresseur d'une pompe à chaleur entre-t-il dans le plafond de la formule Sérénité ?", "source_attendue": "conditions-generales.md", "doit_contenir_un_de": [["non", "exclu", "n'entre pas", "pas inclus", "pas couvert"]]},
+  {"id": "R04", "question": "Combien de temps le compresseur d'une PAC Aerotherm est-il garanti par le constructeur ?", "source_attendue": "garanties-constructeurs.md", "doit_contenir_un_de": [["5 ans", "cinq ans"]]},
+  {"id": "R05", "question": "Que doit faire le technicien en cas d'odeur de gaz chez un client ?", "source_attendue": "securite-gaz.md", "doit_contenir_un_de": [["robinet", "compteur", "aérer", "fenêtres", "0 800 47 33 33", "GRDF", "évacu", "sortir"]]},
+  {"id": "R06", "question": "À quelle fréquence l'entretien d'une pompe à chaleur de 8 kW est-il obligatoire ?", "source_attendue": "entretien-reglementaire.md", "doit_contenir_un_de": [["deux ans", "2 ans"]]},
+  {"id": "R07", "question": "Combien coûte une heure de main-d'œuvre pour un dépannage hors contrat ?", "source_attendue": "conditions-generales.md|tarifs-2026.md", "doit_contenir_un_de": [["68"]]},
+  {"id": "R08", "question": "Sous quel délai un client en formule Sérénité est-il dépanné ?", "source_attendue": "conditions-generales.md", "doit_contenir_un_de": [["24"]]},
+  {"id": "R09", "question": "Qui doit valider une facture de dépannage de 200 € HT avant son envoi ?", "source_attendue": "procedure-sav.md", "doit_contenir_un_de": [["Dumas", "responsable SAV"]]},
+  {"id": "R10", "question": "Les dégâts du gel dans une résidence secondaire non chauffée sont-ils couverts par le contrat ?", "source_attendue": "conditions-generales.md", "doit_contenir_un_de": [["non", "pas couverts", "exclu", "ne sont pas"]]},
+  {"id": "R11", "question": "Un technicien sans attestation de capacité peut-il remplacer le compresseur d'une PAC ?", "source_attendue": "habilitations.md", "doit_contenir_un_de": [["non", "ne peut pas", "pas autorisé", "seuls"]]},
+  {"id": "R12", "question": "Un salarié peut-il coller un rapport d'intervention dans ChatGPT pour le résumer ?", "source_attendue": "charte-ia.md", "doit_contenir_un_de": [["non", "jamais", "interdit", "pas autorisé", "ne sont jamais"]]},
+  {"id": "R13", "question": "Le parking du siège est-il gratuit pour les visiteurs ?", "source_attendue": null},
+  {"id": "R14", "question": "Quel est le prix d'une pompe à chaleur neuve, pose comprise ?", "source_attendue": null}
+]

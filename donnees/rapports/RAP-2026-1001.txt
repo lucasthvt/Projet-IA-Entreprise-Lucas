@@ -1,0 +1,7 @@
+Rapport d'intervention — 01/10/2026 — technicienne : Julie Morel
+Client : CL-0101 — Mme Sophie Martin, 12 rue Michelet, Saint-Étienne — tél. 06 39 98 01 01
+Équipement : chaudière gaz Calorix CX24
+Appel de la cliente : la chaudière se met en sécurité au démarrage, plus d'eau chaude depuis ce matin.
+Constat : électrode d'allumage usée et encrassée (déjà signalée à l'entretien de février). Allumage aléatoire.
+Travaux : remplacement de l'électrode d'allumage (P-ELEC-01), contrôle de combustion OK, essais OK.
+Temps passé : 30 min.

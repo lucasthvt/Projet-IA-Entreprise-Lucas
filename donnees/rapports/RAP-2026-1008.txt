@@ -1,0 +1,6 @@
+Rapport d'intervention — 08/10/2026 — technicien : Karim Haddad
+Client : CL-0120 — M. et Mme Bonnet, Roche-la-Molière
+Équipement : PAC air-eau Aerotherm AT8 (posée par nous en juin 2025)
+Bruit de roulement puis arrêt du ventilateur de l'unité extérieure. Moteur du ventilateur bloqué, roulement HS.
+Travaux : remplacement du ventilateur d'unité extérieure (P-VENTIL-AT), demande de garantie ouverte sur le portail Aerotherm (photo et n° de série joints).
+Temps passé : 1 h.

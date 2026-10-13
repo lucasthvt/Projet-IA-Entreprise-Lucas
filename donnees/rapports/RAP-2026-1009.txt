@@ -1,0 +1,6 @@
+Rapport d'intervention — 09/10/2026 — technicien : Thomas Brun
+Client : CL-0109 — M. Alain Vernay, Feurs
+Équipement : PAC air-eau Aerotherm AT11
+La PAC disjoncte au démarrage du compresseur. Mesures d'isolement : compresseur en court-circuit.
+Travaux : remplacement du compresseur Aerotherm AT (P-COMP-AT), récupération et recharge du fluide R32, tirage au vide, essais OK. Demande de garantie ouverte chez Aerotherm.
+Temps passé : 5 h.

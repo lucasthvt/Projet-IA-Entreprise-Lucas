@@ -1,0 +1,7 @@
+Rapport d'intervention — 05/10/2026 — technicien : Thomas Brun
+Client : CL-0112 — Mme Chantal Perrin, Montbrison
+Équipement : PAC air-eau Aerotherm AT11
+Code défaut E47 affiché, la PAC ne démarre plus. Mme Perrin a froid, elle demande si c'est "encore couvert cette fois".
+Diagnostic : carte électronique de régulation HS (composant brûlé). Pas de trace de surtension.
+Travaux : remplacement de la carte électronique Aerotherm AT (P-CARTE-AT), paramétrage, essais concluants.
+Temps passé : 1 h 30.
